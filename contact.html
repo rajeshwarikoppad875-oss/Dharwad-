@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Dharwad Culture</title>
+ <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Background and General Settings (same as homepage) */
+   body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #f5f5f5;
+  background-image: url("https://s7ap1.scene7.com/is/image/incredibleindia/1-chandramouleshwara-temple-dharwad-karnataka-2-city-hero?qlt=82&ts=1726720807177");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}/* General Page Settings */
+
+
+/* Overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 20, 40, 0.85);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  background-color: rgba(20, 40, 70, 0.9);
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: lightgreen;
+  letter-spacing: 1px;
+}
+
+.menu a {
+  color: lightgreen;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: lightgreen;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: lightgreen;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #dcdcdc;
+}
+
+.btn {
+  background-color: blue;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #1b1b1b;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f5c400;
+}
+
+/* Info Section */
+.section {
+  padding: 80px 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section h3 {
+  font-size: 32px;
+  color: lightgreen;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.card h4 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+.card h1 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #e0e0e0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+a {
+  color: #fff;
+}
+
+.center-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(20, 40, 70, 0.95);
+  color: #f5f5f5;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: 80px;
+  border-top: 2px solid #ffd700;
+}
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 25, 47, 0.85);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(17, 45, 78, 0.8);
+      color: #F9F9F9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: lightgreen;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    .menu a:hover {
+      color: lightgreen;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      color: lightgreen;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      color: #E0E0E0;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .contact-info, .contact-form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      width: 350px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-info h3 {
+      color: #3A86FF;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      line-height: 1.6;
+      color: #E0E0E0;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255,255,255,0.15);
+      color: white;
+      font-size: 16px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #B0B0B0;
+    }
+
+
+    .btn {
+      background-color: #3A86FF;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: lightblue;
+    }
+
+    /* Social Links */
+    .social {
+      margin-top: 30px;
+    }
+
+    .social a {
+      color: #FFD60A;
+      margin: 0 10px;
+      font-size: 22px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      color: #3A86FF;
+    }
+    footer {
+      background-color: rgba(17, 45, 78, 0.9);
+      color: #F9F9F9;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: 80px;
+      border-top: 2px solid #3A86FF;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Dharwad Heritage</div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="culture.html">Culture</a>
+      <a href="music.html">Musicians</a>
+      <a href="farming.html">Farming</a>
+     <a href="education.html" class="active">Educational Hub</a>
+
+
+      <a href="contact.html" class="btn">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? Reach out to us anytime. We'd love to hear from you.</p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Our Information</h3>
+        <p><strong>Email:</strong>nandishgangai@gamil.com</p>
+        <p><strong>Email:</strong>rajeshwarikoppad875@gamil.com</p>
+	<p><strong>Email:</strong>yanamanollap@gamil.com</p>
+
+        
+        <div class="social">
+          <a href="#">💻GitHub-rajeshwarikoppad875-oss</a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+   <p>© 2025 Dharwad Heritage Project | Designed by Brogrammers</p>
+
+  </footer>
+
+</body>
+</html>

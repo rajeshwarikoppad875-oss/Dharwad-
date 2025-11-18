@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+  /* Hide all menu except Home ONLY on index page */
+  .menu a:not([href="index.html"]) {
+    display: none;
+  }
+</style>
+
+
+  <meta charset"UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharwad Heritage</title>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="home">
+
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Dharwad Heritage</div>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()"></div>
+
+    <nav class="menu">
+      <a href="index.html" class="btn">Home</a>
+      <a href="culture.html">Culture</a>
+      <a href="music.html">Musicians</a>
+      <a href="farming.html">Farming</a>
+      <a href="education.html">Educational Hub</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Dharwad</h2>
+    <p>Explore the rich culture, traditions, and musical heritage of Dharwad district.</p>
+   <a href="learnmore.html"></a>
+  <a href="culture.html" class="learn-btn">Learn More</a>
+
+
+
+  </section>
+
+  
+ 
+
+  <!-- Script for Hamburger Menu -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.menu').classList.toggle('show');
+    }
+  </script>
+<script>
+  function showFullMenu() {
+      // Show all menu items
+      document.querySelectorAll('.menu a').forEach(link => {
+          link.style.display = 'inline-block';
+      });
+
+      // Optional: scroll down to next section
+      document.querySelector('.section').scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+
+</body>
+</html>

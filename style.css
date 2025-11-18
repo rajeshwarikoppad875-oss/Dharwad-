@@ -1,0 +1,370 @@
+/* --------------------------------------------- */
+/* GLOBAL BACKGROUND FOR NON-HOME PAGES          */
+/* --------------------------------------------- */
+
+body.non-home {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #F9F9F9;
+  background-image: url('https://s7ap1.scene7.com/is/image/incredibleindia/1-chandramouleshwara-temple-dharwad-karnataka-2-city-hero?qlt=82&ts=1726720807177');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Dark overlay for all pages */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 20, 40, 0.85);
+  z-index: -1;
+}
+
+/* --------------------------------------------- */
+/* FIXED HEADER                                  */
+/* --------------------------------------------- */
+
+header {
+  background-color: rgba(20, 40, 70, 0.9);
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.logo {
+ font-size: 26px;
+  font-weight: bold;
+  color: lightgreen;
+  letter-spacing: 1px
+}
+
+/* --------------------------------------------- */
+/* NAVIGATION FIX                                 */
+/* --------------------------------------------- */
+
+.menu {
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: 'Abril Fatface', serif;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffd700;
+}
+
+/* --------------------------------------------- */
+/* HOME PAGE SLIDESHOW ONLY                      */
+/* --------------------------------------------- */
+
+.home .hero {
+  width: 100%;
+  height: 100vh;
+  padding: 150px 40px;
+  text-align: center;
+  color: rgb(0, 3, 0);
+  font-weight: bold;
+  font-size: 40px;   /* INCREASED FONT SIZE */
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideBackground 16s infinite;
+}
+body.home .learn-btn {
+    display: inline-block;          /* allow centering */
+    padding: 12px 35px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;          /* remove underline */
+    color: #c6b8b8;                    /* text color */
+    background-color: #1a439a;      /* gold */
+    border-radius: 8px;
+    transition: 0.3s;
+    z-index: 1000;                  /* ensure it’s above overlays */
+    position: relative;             /* allow z-index to work */
+    margin-top: 20px;               /* spacing from paragraph */
+}
+
+
+@keyframes slideBackground {
+  0% { background-image: url('https://tse3.mm.bing.net/th/id/OIP.NmruGBz1c08exC4iYTrTzAHaDk?pid=Api&P=0&h=180'); }
+  25% { background-image: url('https://karnatakatourism.org/wp-content/uploads/2020/05/Shambulingeshwar-Temple-Kundgol-1.jpg'); }
+  50% { background-image: url('https://karnatakatourism.org/wp-content/uploads/2020/05/Nuggikeri-Hanuman-Temple-Dharwad.jpg'); }
+  75% { background-image: url('https://tse4.mm.bing.net/th/id/OIP.HpNZ0WB32WWr0Mvc-dXSmQHaEK?pid=Api&P=0&h=180'); }
+  100% { background-image: url('https://wallpaperaccess.com/full/1598247.jpg'); }
+}
+
+/* --------------------------------------------- */
+/* NON-HOME PAGES: REMOVE SLIDESHOW              */
+/* /* Overlay for readability */
+body.non-home::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 20, 40, 0.85);
+  z-index: -1;
+}
+
+/* Header */
+body.non-home header {
+  background-color: rgba(20, 40, 70, 0.9);
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+/* NON-HOME PAGES HEADER: normal flow (not fixed) */
+body.non-home header {
+    position: static; /* or just remove this line */
+    width: 100%;
+    top: auto;        /* reset top */
+    z-index: auto;    /* reset z-index */
+}
+
+
+body.non-home .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: lightgreen;
+  letter-spacing: 1px;
+}
+
+body.non-home .menu a {
+  color: #f5f5f5;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+body.non-home .menu a:hover {
+  color: #1334c4;
+}
+
+/* Hero Section */
+body.non-home .hero {
+  text-align: center;
+  padding: 15px 20px;
+}
+
+body.non-home .hero h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: lightgreen;
+  text-align:center;
+}
+
+body.non-home .hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #dcdcdc;
+  text-align:center;
+}
+
+body.non-home .btn {
+  background-color: #2dbec3;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #1b1b1b;
+  transition: 0.3s;
+}
+
+body.non-home .btn:hover {
+  background-color: #98c7cb;
+}
+
+
+/* Hover effect */
+body.non-home .learn-btn {
+    display: inline-block;          /* allow centering */
+    padding: 12px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;          /* remove underline */
+    color: #000;                    /* text color */
+    background-color: #ffd700;      /* gold */
+    border-radius: 8px;
+    transition: 0.3s;
+    z-index: 1000;                  /* ensure it’s above overlays */
+    position: relative;             /* allow z-index to work */
+    margin-top: 20px;               /* spacing from paragraph */
+}
+
+/* Ensure parent section allows the button to be visible
+
+
+
+
+/* Info Section */
+body.non-home .section {
+  padding: 80px 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.non-home .section h3 {
+  font-size: 32px;
+  color: lightgreen;
+  margin-bottom: 40px;
+  text-align:center;
+}
+
+body.non-home .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+body.non-home .card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.non-home .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+body.non-home .card h4,
+body.non-home .card h1 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+body.non-home .card p {
+  color: #e0e0e0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+body.non-home a {
+  color: #fff;
+}
+
+body.non-home .center-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+body.non-home footer {
+  background-color: rgba(20, 40, 70, 0.95);
+  color: #f5f5f5;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: 80px;
+  border-top: 2px solid #ffd700;
+}
+--------------------------------------------- */
+
+
+
+/* RESPONSIVE CARDS */
+@media (max-width: 900px) {
+  body.non-home .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  body.non-home .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+}
+/* =============================== */
+/*/* Force all text in sections and non-hero blocks to center */
+body.non-home .section,
+body.non-home .non-hero {
+    text-align: center !important; /* Center everything in section */
+}
+
+body.non-home .section h2,
+body.non-home .section h3,
+body.non-home .section p,
+body.non-home .non-hero h2,
+body.non-home .non-hero p {
+    text-align: center !important; /* Force center headings and paragraphs */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+ NON-HOME PAGE: FORCE CENTERING */
+/* =============================== */
+/* --------------------------------------------- */
+/* NON-HOME PAGES: Ensure content starts below fixed header */
+/* --------------------------------------------- */
+body.non-home .section,
+body.non-home .non-hero {
+    text-align: center;
+    padding-top: 120px; /* space below fixed header */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+body.non-home .section h2,
+body.non-home .section p,
+body.non-home .non-hero h2,
+body.non-home .non-hero p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+/* Learn More Button for Non-Home Pages */
+/* Learn More Button for Non-Home Pages */
+/* Non-home Learn More Button */
+
